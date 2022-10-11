@@ -1,0 +1,22 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int sum(int a, int b, int m)
+{
+    int s = a + b;
+ 
+    
+    s = s % m;
+ 
+    return s;
+}
+ 
+
+int main()
+{
+    int a = 20, b = 10, m = 3;
+ 
+    
+    cout << sum(a, b, m);
+    return 0;
+}
