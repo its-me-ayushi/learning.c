@@ -1,0 +1,39 @@
+#include <iostream>
+
+using namespace std;
+
+void strong()
+{
+    int num,temp,sum=0,f=1,r;
+    
+   cout<<"enter the number:"<<endl;
+   cin>>num;
+   temp=num;
+   while(temp!=0)
+   {
+       r=temp%10;
+       temp=temp/10;
+       for(int i=r;i>=1;i--)
+       {
+           f=f*i;
+          // f*=i;
+          // cout<<f<<endl;
+       }
+      sum=sum+f;
+      // sum+=f;
+       f=1;
+   
+   }
+   if(num==sum)
+   {
+   cout<<"a number is strong"<<"sum="<<sum<<endl;
+   }
+   else{
+   cout<<"a number is not strong"<<"sum="<<sum<<endl;
+       }
+
+}
+int main()
+{
+      strong();
+      }
