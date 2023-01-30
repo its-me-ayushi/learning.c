@@ -1,0 +1,33 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int strong(int num){
+	int n=num%10;
+	// num=num/10;
+	return n;
+}
+
+int fact(int n){
+	int temp=1;
+	while(n>0){
+		temp*=n;
+		n--;
+		// cout<<temp<<endl;
+	}
+	return temp;
+}
+
+int main() {
+	int n,sum=0,tempn;
+	cin>>n;
+	tempn=n;
+	while(n>0){
+		int temp=strong(n);
+		// cout<<temp<<endl;
+		sum+=fact(temp);
+		cout<<sum<<endl;
+		n=n/10;
+	}
+	if(sum==tempn) cout<<"Number is Strong";
+	else cout<<"Number is Weak";
+	return 0;
